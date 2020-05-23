@@ -8,9 +8,14 @@ public class GameData {
     public GameData() {
 
         locations = new ArrayList<>();
+
     }
 
-    public void addLocation(Location location) {
-        locations.add(location);
+    public ArrayList<Location> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(ArrayList<Location> locations) {
+        this.locations = locations;
     }
 }

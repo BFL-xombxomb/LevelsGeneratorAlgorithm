@@ -5,8 +5,9 @@ public class Level {
     private int levelNumber;
     private String goalWord;
     private int pathLength;
-    private ArrayList<String> startWords;
+    private ArrayList<Instance> instances;
     private static int lvlCounter = 1;
+    private String magicQuote = "Your quote will be here";
 
 
     public Level(String goalWord, int pathLength) {
@@ -15,8 +16,7 @@ public class Level {
         this.levelNumber = lvlCounter;
         this.goalWord = goalWord;
         this.pathLength = pathLength;
-
-        startWords = new ArrayList<>();
+        this.instances = new ArrayList<>();
 
         lvlCounter++;
     }
@@ -46,11 +46,13 @@ public class Level {
         this.pathLength = pathLength;
     }
 
-    public ArrayList<String> getStartWords() {
-        return startWords;
+    public ArrayList<Instance> getInstances() {
+        return instances;
     }
 
-    public void setStartWords(ArrayList<String> startWords) {
-        this.startWords = startWords;
+    public void setInstances(ArrayList<Instance> instances) {
+        this.instances = instances;
     }
+
+
 }
